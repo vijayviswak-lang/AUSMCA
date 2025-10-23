@@ -1,0 +1,104 @@
+
+https://www.freecodecamp.org/news/git-branching-commands-explained/
+ By default, your repository starts with a main or master branch, but as your project grows, you'll often need to work on new features, 
+bug fixes, or experiments without disrupting the main code. 
+This is where branching comes in, allowing you to create isolated workspaces.
+
+Why Use Git Branches?
+Using branches in Git provides multiple benefits:
+
+Parallel Development: Teams can work on various parts of a project at the same time without causing conflicts.
+Safe Experimentation: You can test new features or fixes in an isolated environment without impacting the main codebase.
+Version Control: Branches allow you to keep your production environment stable while still developing and testing new ideas.
+
+
+PS C:\Users\Teacher\Desktop\git 23.9.25> git branch
+
+PS C:\Users\Teacher\Desktop\git 23.9.25> cd vijay16
+
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16> git branch
+* main
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16> 
+ *  History restored 
+
+PS C:\Users\Teacher\Desktop\git 23.9.25> git branch
+
+
+    Directory: C:\Users\Teacher\Desktop\git 23.9.25
+
+Mode                LastWriteTime         Length Name                  
+----                -------------         ------ ----                  
+d-----        9/23/2025  12:12 PM                vijay16               
+
+
+
+    Directory: C:\Users\Teacher\Desktop\git 23.9.25
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        9/23/2025  12:12 PM                vijay16
+
+
+PS C:\Users\Teacher\Desktop\git 23.9.25> cd vijay16
+
+
+
+----                -------------         ------ ----
+
+
+* main
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16> git branch hellow     
+  hellow
+* main
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16> git checkout hellow   
+Switched to branch 'hellow'
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16> git branch
+* hellow
+  main
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16> git status
+On branch hellow
+nothing to commit, working tree clean
+
+    Directory: C:\Users\Teacher\Desktop\git 23.9.25\vijay16
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        10/7/2025   1:26 PM                trees
+
+
+Change Branch name
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git branch -m hellow hallow     
+* hallow
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git status
+On branch hallow
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git merge hallow
+Already up to date.
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git branch
+  hallow
+* main
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git log
+commit 003e019390eaa3cb6f41c7938dcfce137dd0bdbb (HEAD -> main, origin/main, origin/HEAD, hallow)
+Author: vijayviswak-lang <vijayviswak@gmail.com>
+Date:   Tue Sep 23 11:33:42 2025 +0530
+
+    Initial commit
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> 
+
+
+delete a branch
+
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git branch -d hallow
+Deleted branch hallow (was 003e019).
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> git branch
+* main
+PS C:\Users\Teacher\Desktop\git 23.9.25\vijay16\trees> 
+
+Create Files
+echo file1 > file1.txt
+echo file2 > file2.txt
